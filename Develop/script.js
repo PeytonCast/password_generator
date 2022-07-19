@@ -22,6 +22,7 @@ generateBtn.addEventListener("click", writePassword);
   
  
 function generatePassword(){
+  
 //this funtion will need to be filled for the password to generate.
 //it will need promts
 //promt charlength text imput must be intiger, n0 less than 8 no more than 128.Going to need an if else statement
@@ -31,4 +32,21 @@ function generatePassword(){
 //confirm numbers true/false
 //validate the promts true or false for password generation
 
+}
+function prompts(){
+  //console prompts()
+ // charater length prompt will go here 
+ if( confirm('would you like lowercase letters in your password?')){
+  poolArry = poolArry.concat(lowerCaseArry);
+ }
+ if( confirm('would you like uppercase letters in your password?')){
+  poolArry = poolArry.concat(upperCaseArry);
+ }
+ if( confirm('would you like special characters in your password?')){
+  poolArry = poolArry.concat(symbolsArry);
+ }
+ if( confirm('would you like uppercase letters in your password')){
+  poolArry = poolArry.concat(numberArr);
+ }
+ return true;
 }
