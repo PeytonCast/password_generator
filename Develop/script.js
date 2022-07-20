@@ -34,8 +34,13 @@ function generatePassword(){
 
 }
 function prompts(){
-  //console prompts()
- // charater length prompt will go here 
+  poolArry = [];
+  //default poolArry is empty when the user confirms a promt the new array will concat(or pool) into the poolArry hence why i call it poolArry. 
+  //charLength will define how long the password will be.--
+  //It must be a number, and range from 8-128 if these rules are violated the user will be alerted of his/her mistake and returns this function false.
+  charLength = parseInt(prompt("Enter a number on how many characters do you want in your password? ( no less than 8 and no more than 128)"));
+  if(isNaN (charLength) || charLength < 8 || charLength > 128) { alert('character length needs to be a number, 8 - 128 digits');
+  return false; } 
  if( confirm('would you like lowercase letters in your password?')){
   poolArry = poolArry.concat(lowerCaseArry);
  }
