@@ -22,17 +22,18 @@ generateBtn.addEventListener("click", writePassword);
   
  
 function generatePassword(){
-  
-//this funtion will need to be filled for the password to generate.
-//it will need promts
-//promt charlength text imput must be intiger, n0 less than 8 no more than 128.Going to need an if else statement
-//confirm uppercase true/false
-//confirm lowercase true/false
-//confirm special char true/false
-//confirm numbers true/false
-//validate the promts true or false for password generation
-
+var thePassword = ''; 
+// for loop to validates the password length
+for (var i = 0; i < charLength; i++)
+ {
+  //generates a random number and pulls from the newly filled poolArry does this until i
+  var randomIndex = Math.floor(Math.random() * poolArry.length);
+  // stores new value from poolArray as password
+  thePassword = thePassword + poolArry [randomIndex];
 }
+return thePassword;
+}
+
 function prompts(){
   poolArry = [];
   //default poolArry is empty when the user confirms a promt the new array will concat(or pool) into the poolArry hence why i call it poolArry. 
